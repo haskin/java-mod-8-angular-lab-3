@@ -1,0 +1,6 @@
+<p>* {{athlete.name}}({{athlete.sport}})
+    <!-- <span hidden]="!athlete.active">is active</span>
+    <span [hidden]="athlete.active">is not active</span> -->
+    <span *ngIf="athlete.active ; else elseBlock">is active</span>
+    <ng-template #elseBlock>is not active</ng-template>
+</p>
